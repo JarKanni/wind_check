@@ -2,8 +2,14 @@ from noaa_sdk import NOAA
 import pandas as pd
 from statistics import mode
 
+#greets user
+print("\n"*2 + "...breath deep..." + "\n"*2 + "...relax..." + "\n"*2 + "...let's check the weather..." + "\n"*3)
+
+#ask user for zip
+zip = str(input("Which zip would you like to check? "))
+
 #request forecasts and store it into variable 'forecast'
-forecast = NOAA().get_forecasts('60051', 'US')
+forecast = NOAA().get_forecasts(zip, 'US')
 
 #store 'windSpeed' values into a list, ex: '5mph'
 windspeed = [d['windSpeed'] for d in forecast]
@@ -16,10 +22,6 @@ data = { 'Wind Speed': windspeed, 'Direction': direction, 'Start Time': start_ti
 #create DataFrame
 df = pd.DataFrame(data)
 
-
-
-#greets user
-print("\n"*2 + "...breath deep..." + "\n"*2 + "...relax..." + "\n"*2 + "...let's check the weather..." + "\n"*3)
 
 #checks start and end time of df
 print(f"Start time is: {min(start_time)}")
