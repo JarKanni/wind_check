@@ -24,6 +24,5 @@ Packages used:
 
 
 # Contact Information
->Name: Jared R. Kannianen\
->Organization: Masterschool - Data Analyst\
+>Name: Jared R. Kannianen | Spatial Data Analyst\
 >Email: jarkanni@campus.masterschool.com
