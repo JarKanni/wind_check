@@ -3,7 +3,7 @@ Wind Check
 
 
 # Introduction
-Checks NOAA forecasts for wind greater than 5mph
+Asks user for zip code, then checks NOAA's weekly forecasts for wind greater than 5mph.
  
  
 # Requirements
